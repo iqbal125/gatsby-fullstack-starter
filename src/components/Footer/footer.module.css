@@ -1,0 +1,56 @@
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.footer_link {
+  padding: 1em;
+  color: white;
+}
+
+.legal_section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.footer_legal {
+  color: white;
+  padding: 1em;
+}
+
+.footer_buffer {
+  height: 3em;
+  background-color: darkpurple;
+}
+
+.footer_main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3em;
+  background-color: darkblue;
+}
+
+.right_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_bottom {
+  display: flex;
+  flex-direction: row;
+  background-color: darkblue;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}

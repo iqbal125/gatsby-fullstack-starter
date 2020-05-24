@@ -1,0 +1,15 @@
+.icon {
+  font-size: 5em;
+}
+
+.thank_you_message {
+  text-align: center;
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

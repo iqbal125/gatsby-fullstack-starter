@@ -1,0 +1,17 @@
+.blog_layout {
+  width: 80%;
+}
+
+.post_title {
+  text-align: left;
+  font-size: xx-large;
+  padding-bottom: 0.2em;
+}
+
+.date_author {
+  padding-bottom: 0.1em;
+}
+
+.heading {
+  padding-top: 1.5em;
+}

@@ -1,0 +1,51 @@
+.background {
+  background-color: antiquewhite;
+  height: 300px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.cta {
+  padding: 1em;
+  margin: 1em;
+}
+
+.top_div {
+  width: 100%;
+}
+
+.page_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  margin-bottom: -0.5em;
+  width: 100%;
+}
+
+.email_phone {
+  margin: 5em 1em 1em 2em;
+  padding: 1em;
+}
+
+.email_phone > h3 {
+  padding: 1.5em 0em 0em 0em;
+}
+
+.email_phone > p {
+  font-size: 1.2em;
+}
+
+.social_title {
+  padding: 1em;
+  margin: 1em;
+}
+
+.social_bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5em;
+}

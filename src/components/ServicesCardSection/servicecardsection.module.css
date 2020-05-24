@@ -1,0 +1,62 @@
+.main_icon {
+  font-size: 5em;
+  color: blue;
+  animation: spin 10s linear infinite;
+}
+
+.top_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.consult_card {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
+  height: 7em;
+  width: 17.5em;
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+}
+
+.consult_card > p {
+  font-size: 1.2em;
+  padding-right: 0.9em;
+}
+
+.consult_icon {
+  font-size: 2.7em;
+  padding: 0.5em;
+  padding-top: 0.7em;
+}
+
+.top_header {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.second_header {
+  margin-top: 3em;
+}
+
+.card_rows {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_desc {
+  padding-left: 1em;
+  margin: 1em;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

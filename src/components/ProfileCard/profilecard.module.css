@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
+  height: 24em;
+  width: 100%;
+  border-bottom: 2em solid blue;
+}
+
+.card_full {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
+  height: 100%;
+  width: 100%;
+}
+
+.card_top_row {
+  display: flex;
+}
+
+/* fix card image for larger screens, add font weights to card text */
+
+.card_image {
+  width: 10em;
+  height: 13em;
+}
+
+.card_title {
+  padding-left: 1em;
+  padding-right: 0.2em;
+}
+
+.card_desc {
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.collapse {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  padding-left: 1em;
+  padding-bottom: 0.2em;
+  margin-top: -0.5em;
+}
+
+.read_more {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  padding-top: 0.2em;
+}

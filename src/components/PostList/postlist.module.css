@@ -1,0 +1,34 @@
+.link {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 900px) {
+  .post_layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border: lightgrey 0.5px solid;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .post_layout {
+    border: lightgrey 0.5px solid;
+    margin-bottom: 1em;
+  }
+
+  .feature_image {
+    display: none;
+  }
+}
+
+.post_layout:hover {
+  border: lightgrey 0.5px solid;
+  margin-bottom: 1em;
+  background-color: aliceblue;
+}
+
+.post_text_container {
+  padding: 1em;
+}

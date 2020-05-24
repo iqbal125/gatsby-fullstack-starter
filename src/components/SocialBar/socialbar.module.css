@@ -1,0 +1,9 @@
+.social_bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  width: 80%;
+  height: 80%;
+}

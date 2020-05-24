@@ -1,0 +1,29 @@
+.card_wrap {
+  width: 80%;
+}
+
+.card_full {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
+  border-bottom: 2em solid blue;
+}
+
+.card_top_row {
+  display: flex;
+}
+
+.card_image {
+  width: 10em;
+  height: 13em;
+}
+
+.card_title {
+  padding-top: 5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.card_desc {
+  padding: 1em;
+}
