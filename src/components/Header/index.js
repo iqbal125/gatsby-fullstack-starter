@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import styles from './header.module.css';
 
 import { Link } from 'gatsby';
@@ -6,12 +6,15 @@ import Search from '../Search';
 import AuthContext from '../../utils/auth_context';
 import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
+
 import { FcSearch } from 'react-icons/fc';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
+import { MdAccountCircle } from 'react-icons/md';
 
 const Header = ({ props }) => {
   const [menu, toggleMenu] = useState(false);
+  const [hamburger, toggleHamburger] = useState(false);
   const [search, setSearch] = useState(false);
   const context = useContext(AuthContext);
   const { uri } = props;
@@ -19,7 +22,7 @@ const Header = ({ props }) => {
   const isHome = uri === '/';
 
   const menuHandler = () => (menu ? toggleMenu(false) : toggleMenu(true));
-
+  const hamburgerHandler = () => (menu ? toggleHamburger(false) : toggleHamburger(true));
   const searchHandler = () => (search ? setSearch(false) : setSearch(true));
 
   const logOut = () => {
@@ -45,11 +48,11 @@ const Header = ({ props }) => {
           {/* Mobile */}
           <div className={styles.menu_icon}>
             {!menu ? (
-              <div onClick={menuHandler} className={styles.hamburger}>
+              <div onClick={hamburgerHandler} className={styles.hamburger}>
                 <GiHamburgerMenu />
               </div>
             ) : (
-              <div onClick={menuHandler} className={styles.close_button}>
+              <div onClick={hamburgerHandler} className={styles.close_button}>
                 <AiOutlineClose />
               </div>
             )}
@@ -103,6 +106,40 @@ const Header = ({ props }) => {
               <Search />
             </div>
           </div>
+          {!context.state.isAuthenticated && (
+            <Link
+              to="/app/login"
+              className={styles.login_button}
+              activeClassName={styles.login_button_active}
+            >
+              Login
+            </Link>
+          )}
+          {context.state.isAuthenticated && (
+            <div className={styles.drop_down_wrapper}>
+              {context.state.user.photo ? (
+                <img
+                  src={context.state.user.photo}
+                  onClick={menuHandler}
+                  className={styles.header_photo}
+                  alt="Not Found"
+                />
+              ) : (
+                <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
+              )}
+
+              {menu && (
+                <div className={styles.drop_down}>
+                  <div onClick={() => navigate('/app/profile')} className={styles.drop_down_link}>
+                    Profile
+                  </div>
+                  <div onClick={logOut} className={styles.drop_down_link}>
+                    Logout
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
         {/* Mobile */}
         <div className={styles.mobile_search}>
@@ -114,10 +151,45 @@ const Header = ({ props }) => {
           <div onClick={searchHandler} className={styles.search_icon}>
             <FcSearch />
           </div>
+          {!context.state.isAuthenticated && (
+            <Link
+              to="/app/login"
+              className={styles.login_button}
+              activeClassName={styles.login_button_active}
+            >
+              Login
+            </Link>
+          )}
+
+          {context.state.isAuthenticated && (
+            <div className={styles.drop_down_wrapper}>
+              {context.state.user.photo ? (
+                <img
+                  src={context.state.user.photo}
+                  onClick={menuHandler}
+                  className={styles.header_photo}
+                  alt="Not Found"
+                />
+              ) : (
+                <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
+              )}
+
+              {menu && (
+                <div className={styles.drop_down}>
+                  <div onClick={() => navigate('/app/profile')} className={styles.drop_down_link}>
+                    Profile
+                  </div>
+                  <div onClick={logOut} className={styles.drop_down_link}>
+                    Logout
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </header>
       {/* Mobile */}
-      {menu && (
+      {hamburger && (
         <>
           <div className={isHome ? styles.dropdown_home : styles.dropdown_not_home}>
             <Link
