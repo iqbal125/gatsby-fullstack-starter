@@ -65,6 +65,21 @@
   .mobile_search {
     display: none;
   }
+
+  .login_button_desktop {
+    border: none;
+    padding: 0.6em 1.3em 0.6em 1.3em;
+    margin: 0.5em;
+    margin-right: 2em;
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    font-weight: 900;
+  }
+
+  .login_button_mobile {
+    display: none;
+  }
 }
 
 /* Mobile Header */
@@ -205,6 +220,22 @@
   .search {
     display: none;
   }
+
+  .login_button_mobile {
+    border: none;
+    padding: 0.6em 1.3em 0.6em 1.3em;
+    margin: 0.5em;
+    margin-left: 1.3em;
+    margin-right: 2em;
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    font-weight: 900;
+  }
+
+  .login_button_desktop {
+    display: none;
+  }
 }
 
 /* Drop down menu */
@@ -244,28 +275,6 @@
 }
 
 .drop_down_link:hover {
-  color: white;
-  background-color: blue;
-}
-
-/* Login Button */
-
-.login_button {
-  border: 1px solid blue;
-  padding: 0.5em;
-  margin: 0.5em;
-  margin-right: 2.5em;
-  text-decoration: none;
-  color: black;
-  border-radius: 5px;
-}
-
-.login_button_active {
-  color: white;
-  background-color: blue;
-}
-
-.login_button:hover {
   color: white;
   background-color: blue;
 }

@@ -107,11 +107,7 @@ const Header = ({ props }) => {
             </div>
           </div>
           {!context.state.isAuthenticated && (
-            <Link
-              to="/app/login"
-              className={styles.login_button}
-              activeClassName={styles.login_button_active}
-            >
+            <Link to="/app/login" className={styles.login_button_desktop}>
               Login
             </Link>
           )}
@@ -154,7 +150,7 @@ const Header = ({ props }) => {
           {!context.state.isAuthenticated && (
             <Link
               to="/app/login"
-              className={styles.login_button}
+              className={styles.login_button_mobile}
               activeClassName={styles.login_button_active}
             >
               Login
@@ -188,7 +184,7 @@ const Header = ({ props }) => {
           )}
         </div>
       </header>
-      {/* Mobile */}
+      {/* Mobile Hamburger Links*/}
       {hamburger && (
         <>
           <div className={isHome ? styles.dropdown_home : styles.dropdown_not_home}>
