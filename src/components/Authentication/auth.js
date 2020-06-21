@@ -42,7 +42,7 @@ const Auth = () => {
 
     const sendtokenToServer = token => {
       axios
-        .post('http://localhost:3000/sendtoken', { token })
+        .post(`${process.env.GATSBY_SERVER_URL}/sendtoken`, { token })
         .then(res => sendProfiletoContext(res.data))
         .catch(err => console.log(err));
     };
@@ -61,7 +61,7 @@ const Auth = () => {
       };
 
       context.saveUser(user);
-      navigate('/app/profile');
+      setTimeout(() => navigate('/app/profile'), 400);
     };
   };
 
