@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.layout_fade {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.4;
+}
+
 main {
   display: flex;
   justify-content: center;

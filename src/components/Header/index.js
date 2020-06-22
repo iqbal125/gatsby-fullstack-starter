@@ -4,6 +4,7 @@ import styles from './header.module.css';
 import { Link } from 'gatsby';
 import Search from '../Search';
 import AuthContext from '../../utils/auth_context';
+import GeneralContext from '../../utils/general_context';
 import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
 
@@ -13,23 +14,29 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { MdAccountCircle } from 'react-icons/md';
 
 const Header = ({ props }) => {
-  const [menu, toggleMenu] = useState(false);
   const [navLinks, toggleNavLinks] = useState(false);
   const [search, setSearch] = useState(false);
   const context = useContext(AuthContext);
+  const contextGeneral = useContext(GeneralContext);
   const { uri } = props;
 
   const isHome = uri === '/';
 
-  const menuHandler = () => (menu ? toggleMenu(false) : toggleMenu(true));
   const navLinksHandler = () => (navLinks ? toggleNavLinks(false) : toggleNavLinks(true));
   const searchHandler = () => (search ? setSearch(false) : setSearch(true));
+  const menuHandler = () => {
+    contextGeneral.sideState.isOpen
+      ? contextGeneral.closeSideDrawer()
+      : contextGeneral.openSideDrawer();
+  };
 
   const logOut = () => {
     navigate('/');
     context.firebase.auth().signOut();
     setTimeout(() => context.LogOut(), 200);
   };
+
+  console.log(contextGeneral);
 
   return (
     <>
@@ -193,7 +200,7 @@ const Header = ({ props }) => {
           </div>
         </>
       )}
-      <div className={styles.side_drawer}>fffff</div>
+      {contextGeneral.sideState.isOpen && <div className={styles.side_drawer}>fffff</div>}
     </>
   );
 };
