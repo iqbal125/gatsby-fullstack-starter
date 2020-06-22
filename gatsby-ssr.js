@@ -1,4 +1,4 @@
 import React from 'react';
-import AuthProvider from './src/components/AuthProvider';
+import ContextProvider from './src/components/ContextProvider';
 
-export const wrapRootElement = ({ element }) => <AuthProvider>{element}</AuthProvider>;
+export const wrapRootElement = ({ element }) => <ContextProvider>{element}</ContextProvider>;

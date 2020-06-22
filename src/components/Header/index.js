@@ -102,16 +102,16 @@ const Header = ({ props }) => {
               <Search />
             </div>
           </div>
-          {!context.state.isAuthenticated && (
+          {!context.authState.isAuthenticated && (
             <Link to="/app/login" className={styles.login_button_desktop}>
               Login
             </Link>
           )}
-          {context.state.isAuthenticated && (
+          {context.authState.isAuthenticated && (
             <div className={styles.header_photo_wrap_desk}>
-              {context.state.user.photo ? (
+              {context.authState.user.photo ? (
                 <img
-                  src={context.state.user.photo}
+                  src={context.authState.user.photo}
                   onClick={menuHandler}
                   className={styles.header_photo}
                   alt="Not Found"
@@ -132,7 +132,7 @@ const Header = ({ props }) => {
           <div onClick={searchHandler} className={styles.search_icon}>
             <FcSearch />
           </div>
-          {!context.state.isAuthenticated && (
+          {!context.authState.isAuthenticated && (
             <Link
               to="/app/login"
               className={styles.login_button_mobile}
@@ -142,11 +142,11 @@ const Header = ({ props }) => {
             </Link>
           )}
 
-          {context.state.isAuthenticated && (
+          {context.authState.isAuthenticated && (
             <div className={styles.header_photo_wrap_mobile}>
-              {context.state.user.photo ? (
+              {context.authState.user.photo ? (
                 <img
-                  src={context.state.user.photo}
+                  src={context.authState.user.photo}
                   onClick={menuHandler}
                   className={styles.header_photo}
                   alt="Not Found"
@@ -193,7 +193,7 @@ const Header = ({ props }) => {
           </div>
         </>
       )}
-      <div className={styles.side_drawer}></div>
+      <div className={styles.side_drawer}>fffff</div>
     </>
   );
 };

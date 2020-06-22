@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT } from './action_types';
+import { LOGIN, LOGOUT, SIDEDRAWERCLOSE, SIDEDRAWEROPEN } from './action_types';
 
 export const saveUserAction = user => {
   return {
@@ -10,3 +10,7 @@ export const saveUserAction = user => {
 export const Logout = {
   type: LOGOUT
 };
+
+export const SideDrawerOpen = { type: SIDEDRAWEROPEN };
+
+export const SideDrawerClose = { type: SIDEDRAWERCLOSE };
