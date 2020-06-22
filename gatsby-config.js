@@ -58,6 +58,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true
+      }
+    },
+    {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: process.env.GATSBY_DISQUS_SHORTNAME

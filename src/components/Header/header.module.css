@@ -246,35 +246,3 @@
   height: 40px;
   vertical-align: middle;
 }
-
-.drop_down_wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.drop_down_wrapper > i {
-  margin-top: 5px;
-  cursor: pointer;
-}
-
-.drop_down_account {
-  position: absolute;
-  z-index: 1;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  background-color: white;
-}
-
-.drop_down_link {
-  text-align: center;
-  width: 10vh;
-  padding: 5px;
-  border-bottom: 1px solid black;
-  cursor: pointer;
-}
-
-.drop_down_link:hover {
-  color: white;
-  background-color: blue;
-}

@@ -123,17 +123,6 @@ const Header = ({ props }) => {
               ) : (
                 <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
               )}
-
-              {menu && (
-                <div className={styles.drop_down}>
-                  <div onClick={() => navigate('/app/profile')} className={styles.drop_down_link}>
-                    Profile
-                  </div>
-                  <div onClick={logOut} className={styles.drop_down_link}>
-                    Logout
-                  </div>
-                </div>
-              )}
             </div>
           )}
         </div>
@@ -168,17 +157,6 @@ const Header = ({ props }) => {
                 />
               ) : (
                 <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
-              )}
-
-              {menu && (
-                <div className={styles.drop_down}>
-                  <div onClick={() => navigate('/app/profile')} className={styles.drop_down_link}>
-                    Profile
-                  </div>
-                  <div onClick={logOut} className={styles.drop_down_link}>
-                    Logout
-                  </div>
-                </div>
               )}
             </div>
           )}
