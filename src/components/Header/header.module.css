@@ -80,6 +80,10 @@
   .login_button_mobile {
     display: none;
   }
+
+  .header_photo_wrap_mobile {
+    display: none;
+  }
 }
 
 /* Mobile Header */
@@ -236,9 +240,13 @@
   .login_button_desktop {
     display: none;
   }
+
+  .header_photo_wrap_desk {
+    display: none;
+  }
 }
 
-/* Drop down menu */
+/* */
 .header_photo {
   border-radius: 50%;
   cursor: pointer;

@@ -14,7 +14,7 @@ import { MdAccountCircle } from 'react-icons/md';
 
 const Header = ({ props }) => {
   const [menu, toggleMenu] = useState(false);
-  const [hamburger, toggleHamburger] = useState(false);
+  const [navLinks, toggleNavLinks] = useState(false);
   const [search, setSearch] = useState(false);
   const context = useContext(AuthContext);
   const { uri } = props;
@@ -22,7 +22,7 @@ const Header = ({ props }) => {
   const isHome = uri === '/';
 
   const menuHandler = () => (menu ? toggleMenu(false) : toggleMenu(true));
-  const hamburgerHandler = () => (menu ? toggleHamburger(false) : toggleHamburger(true));
+  const navLinksHandler = () => (navLinks ? toggleNavLinks(false) : toggleNavLinks(true));
   const searchHandler = () => (search ? setSearch(false) : setSearch(true));
 
   const logOut = () => {
@@ -30,10 +30,6 @@ const Header = ({ props }) => {
     context.firebase.auth().signOut();
     setTimeout(() => context.LogOut(), 200);
   };
-
-  /* All the desktop elements are set to display: none in the mobile 
-  media query in css and vice versa. This pattern is used to avoid complex issues 
-  during build phases arising from using the window object */
 
   return (
     <>
@@ -47,12 +43,12 @@ const Header = ({ props }) => {
           </div>
           {/* Mobile */}
           <div className={styles.menu_icon}>
-            {!menu ? (
-              <div onClick={hamburgerHandler} className={styles.hamburger}>
+            {!navLinks ? (
+              <div onClick={navLinksHandler} className={styles.hamburger}>
                 <GiHamburgerMenu />
               </div>
             ) : (
-              <div onClick={hamburgerHandler} className={styles.close_button}>
+              <div onClick={navLinksHandler} className={styles.close_button}>
                 <AiOutlineClose />
               </div>
             )}
@@ -112,7 +108,7 @@ const Header = ({ props }) => {
             </Link>
           )}
           {context.state.isAuthenticated && (
-            <div className={styles.drop_down_wrapper}>
+            <div className={styles.header_photo_wrap_desk}>
               {context.state.user.photo ? (
                 <img
                   src={context.state.user.photo}
@@ -147,7 +143,7 @@ const Header = ({ props }) => {
           )}
 
           {context.state.isAuthenticated && (
-            <div className={styles.drop_down_wrapper}>
+            <div className={styles.header_photo_wrap_mobile}>
               {context.state.user.photo ? (
                 <img
                   src={context.state.user.photo}
@@ -163,7 +159,7 @@ const Header = ({ props }) => {
         </div>
       </header>
       {/* Mobile Hamburger Links*/}
-      {hamburger && (
+      {navLinks && (
         <>
           <div className={isHome ? styles.dropdown_home : styles.dropdown_not_home}>
             <Link
@@ -197,6 +193,7 @@ const Header = ({ props }) => {
           </div>
         </>
       )}
+      <div className={styles.side_drawer}></div>
     </>
   );
 };
