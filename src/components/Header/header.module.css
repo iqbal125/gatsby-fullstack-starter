@@ -254,16 +254,3 @@
   height: 40px;
   vertical-align: middle;
 }
-
-/* Side Nav */
-
-.side_drawer {
-  height: 100%;
-  width: 20%;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  background-color: bisque;
-  overflow-x: hidden;
-}

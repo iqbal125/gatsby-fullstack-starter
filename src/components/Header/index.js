@@ -6,7 +6,6 @@ import Search from '../Search';
 import AuthContext from '../../utils/auth_context';
 import GeneralContext from '../../utils/general_context';
 import logo from '../../../static/logos/favicon.ico';
-import { navigate } from 'gatsby';
 
 import { FcSearch } from 'react-icons/fc';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -29,14 +28,6 @@ const Header = ({ props }) => {
       ? contextGeneral.closeSideDrawer()
       : contextGeneral.openSideDrawer();
   };
-
-  const logOut = () => {
-    navigate('/');
-    context.firebase.auth().signOut();
-    setTimeout(() => context.LogOut(), 200);
-  };
-
-  console.log(contextGeneral);
 
   return (
     <>
@@ -200,7 +191,6 @@ const Header = ({ props }) => {
           </div>
         </>
       )}
-      {contextGeneral.sideState.isOpen && <div className={styles.side_drawer}>fffff</div>}
     </>
   );
 };

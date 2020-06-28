@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import AuthContext from '../../utils/auth_context';
 
 const Profile = () => {
-  const { authState } = useContext(AuthContext);
+  const context = useContext(AuthContext);
 
   return (
     <div>
-      <h1>Welcome: {authState.user.username} </h1>
+      <h1>Welcome: {context.authState.user.username} </h1>
     </div>
   );
 };

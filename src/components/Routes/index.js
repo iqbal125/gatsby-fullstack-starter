@@ -15,7 +15,7 @@ const Routes = () => {
   };
 
   const PrivateRoute = ({ component: Component, location, ...rest }) => {
-    let isAuthenticated = context.state.isAuthenticated;
+    let isAuthenticated = context.authState.isAuthenticated;
 
     if (!isAuthenticated && isTokenValid()) {
       context.LogOut();
