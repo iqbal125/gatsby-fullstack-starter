@@ -42,7 +42,7 @@ const Auth = () => {
 
     const sendtokenToServer = token => {
       axios
-        .post(`${process.env.GATSBY_SERVER_URL}/sendtoken`, { token })
+        .post(`${process.env.GATSBY_SERVER_URL}/auth/sendtoken`, { token })
         .then(res => sendProfiletoContext(res.data))
         .catch(err => console.log(err));
     };
