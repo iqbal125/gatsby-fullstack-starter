@@ -1,0 +1,38 @@
+.main_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_row > label {
+  padding-bottom: 0.2em;
+}
+
+.form_row > textarea {
+  height: 7em;
+}
+
+.form_row {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+.submit_button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  align-self: center;
+  width: 50%;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: blue;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.edit_button_row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
