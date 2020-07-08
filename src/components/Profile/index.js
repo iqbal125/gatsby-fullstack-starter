@@ -4,26 +4,36 @@ import axios from 'axios';
 import styles from './profile.module.css';
 
 const Profile = () => {
-  const context = useContext(AuthContext);
   const [todos, setTodos] = useState(null);
   const [formTitle, setTitle] = useState('');
   const [formDescription, setDescription] = useState('');
+
+  const context = useContext(AuthContext);
+  const { authState } = context;
+  const { user } = authState;
 
   //Edit Todo state and form state
   const [isEditting, setEdit] = useState(false);
   const [editTodoID, setTodoID] = useState(null);
   const [editTitle, setEditTitle] = useState('');
   const [editDescription, setEditDescription] = useState('');
-  const author = context.authState.user.username;
 
   const fetchTodos = async () => {
+    let author = user ? user.username : '';
     let params = { author };
-    let results = await axios.get(`${process.env.GATSBY_SERVER_URL}/api/get/todos`, { params });
-    setTodos(results.data);
+    if (user) {
+      let results = await axios.get(`${process.env.GATSBY_SERVER_URL}/api/get/todos`, { params });
+      setTodos(results.data);
+    }
   };
+
+  //useEffect(() => {
+  //  fetchTodos();
+  //}, [user]);
 
   const postTodo = async event => {
     event.preventDefault();
+    let author = user ? user.username : '';
     let title = event.target.title.value;
     let description = event.target.description.value;
 
@@ -47,6 +57,7 @@ const Profile = () => {
     event.preventDefault();
     let title = event.target.title.value;
     let description = event.target.description.value;
+    let author = user ? user.username : '';
     let todo_id = todo.todo_id;
 
     let data = { title, description, author, todo_id };
@@ -78,13 +89,8 @@ const Profile = () => {
     setEditDescription(event.target.value);
   };
 
-  useEffect(() => {
-    fetchTodos();
-  }, []);
-
   return (
     <div>
-      <h1>Welcome: {context.authState.user.username} </h1>
       <form onSubmit={postTodo} className={styles.main_form}>
         <div className={styles.form_row}>
           <label>Title:</label>
