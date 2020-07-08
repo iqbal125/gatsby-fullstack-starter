@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import styles from './auth.module.css';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { navigate } from 'gatsby';
@@ -9,6 +9,11 @@ import axios from 'axios';
 const Auth = () => {
   const [isLoading, setLoading] = useState(false);
   const context = useContext(AuthContext);
+
+  useEffect(() => {
+    context.firebase.auth().signOut();
+    setTimeout(() => context.LogOut(), 200);
+  }, []);
 
   const uiConfig = {
     credentialHelper: 'none',
