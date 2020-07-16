@@ -4,7 +4,7 @@ import ProfileCardFull from '../ProfileCardFull';
 import styles from './profilecardsection.module.css';
 import { profiles, profile1 } from './profileinfo.js';
 
-//add chris' profile card
+
 
 const ProfileCardSection = () => {
   return (
