@@ -1,9 +1,10 @@
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
+/* Desktop Styles */
 @media only screen and (min-width: 900px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
   .landing_hero {
     display: flex;
     padding-top: 3em;
@@ -14,9 +15,92 @@
     background-size: 100%;
     background-color: lightcyan;
   }
+
+  .feature1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+  }
+  .feature1_text {
+    margin-right: 2em;
+    padding-top: 2em;
+    padding-right: 1em;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature2_text {
+    padding-top: 1em;
+    padding-left: 3em;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Landing Page IMGs and Animations*/
+
+  .feature1_img {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 25em;
+    height: 25em;
+    animation: fadeInRight 1.5s;
+  }
+
+  .feature2_img {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-right: 3em;
+    width: 22em;
+    height: 22em;
+    animation: fadeInLeft 1.5s;
+  }
+
+  .img_container {
+    flex-basis: 40%;
+  }
+
+  .feature1_img_none {
+    opacity: 0;
+  }
+
+  .feature2_img_none {
+    opacity: 0;
+  }
+
+  /* Mobile Only */
+
+  .feature2_img_mobile {
+    display: none;
+  }
+
+  .feature2_img_mobile_none {
+    display: none;
+  }
+
+  /* Landing Img End */
+
+  .pic_section {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 6em;
+    padding-bottom: 3em;
+  }
 }
 
+/* Mobile Styles */
 @media only screen and (max-width: 900px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
   .landing_hero {
     display: flex;
     flex-direction: column;
@@ -27,9 +111,7 @@
     background-size: 100%;
     background-color: lightcyan;
   }
-}
 
-@media only screen and (max-width: 900px) {
   .feature1 {
     display: flex;
     flex-direction: column;
@@ -52,67 +134,53 @@
     align-items: center;
   }
 
+  .feature2_text {
+    padding-top: 1em;
+    padding-left: 3em;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Landing Page Pics and Animations*/
+
   .feature1_img {
     padding-top: 5em;
     padding-bottom: 2em;
-    width: 60%;
-    height: 60%;
+    width: 25em;
+    height: 25em;
+    animation: fadeInRight 1s;
   }
 
-  .feature2_text {
-    padding-top: 1em;
-    padding-left: 3em;
-    flex-basis: 30%;
-    display: flex;
-    flex-direction: column;
+  .feature2_img_mobile {
+    padding-top: 5em;
+    padding-bottom: 2em;
+    width: 25em;
+    height: 25em;
+    animation: fadeInRight 1s;
   }
 
+  .feature1_img_none {
+    opacity: 0;
+  }
+
+  .feature2_img_mobile_none {
+    opacity: 0;
+  }
+
+  /* Desktop Only */
   .feature2_img {
     display: none;
   }
-}
 
-@media only screen and (min-width: 900px) {
-  .feature1 {
-    display: flex;
-    justify-content: center;
+  .feature2_img_none {
+    display: none;
   }
 
-  .feature2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 5em;
-  }
-  .feature1_text {
-    margin-right: 2em;
-    padding-top: 2em;
-    padding-right: 1em;
-    flex-basis: 30%;
-    display: flex;
-    flex-direction: column;
-  }
+  /* Landing Img End */
 
-  .feature1_img {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    width: 40%;
-    height: 40%;
-  }
-
-  .feature2_text {
-    padding-top: 1em;
-    padding-left: 3em;
-    flex-basis: 30%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .feature2_img {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin-right: 3em;
-    width: 40%;
-    height: 40%;
+  .pic_section {
+    display: none;
   }
 }
 
@@ -136,25 +204,11 @@
   height: 50%;
   padding-right: 1em;
   margin-right: 1.5em;
+  animation: fadeInRight 1.5s;
 }
 
 .wave_bottom_hero > img {
   width: 100%;
-}
-
-@media only screen and (min-width: 900px) {
-  .pic_section {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 6em;
-    padding-bottom: 3em;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .pic_section {
-    display: none;
-  }
 }
 
 .pic {
@@ -217,4 +271,28 @@
 .social_bar {
   padding-top: 7em;
   margin: 1em;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
