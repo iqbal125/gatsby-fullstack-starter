@@ -1,7 +1,7 @@
 @media only screen and (min-width: 900px) {
   .blog_layout {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 80%;
   }
 }
 
@@ -34,16 +34,17 @@
 .previous {
   border-bottom: 1px solid black;
   color: black;
-  align-self: flex-end;
+  text-decoration: none;
 }
 
 .next {
   border-bottom: 1px solid black;
   color: black;
-  align-self: flex-end;
+  text-decoration: none;
 }
 
-.page_change {
-  text-decoration: none;
-  color: black;
+.disable_pagination {
+  cursor: not-allowed;
+  color: grey;
+  pointer-events: none;
 }

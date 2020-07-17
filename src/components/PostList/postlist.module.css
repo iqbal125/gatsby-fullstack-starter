@@ -4,7 +4,6 @@
     grid-template-columns: 30% 70%;
     overflow: hidden;
     margin-bottom: 2em;
-    width: 80%;
   }
 
   .post_layout:hover {

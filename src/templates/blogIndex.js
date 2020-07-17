@@ -27,21 +27,23 @@ const BlogIndex = props => {
               ))
             : null}
           <div className={styles.pagination_row}>
-            {!isFirstPage && (
-              <div className={styles.previous}>
-                <Link className={styles.page_change} to={previousPagePath}>
-                  More Recent Posts
-                </Link>
-              </div>
-            )}
+            <div>
+              <Link
+                className={!isFirstPage ? styles.next : styles.disable_pagination}
+                to={previousPagePath}
+              >
+                More Recent Posts
+              </Link>
+            </div>
 
-            {!isLastPage && (
-              <div className={styles.next}>
-                <Link className={styles.page_change} to={nextPagePath}>
-                  Older Posts
-                </Link>
-              </div>
-            )}
+            <div>
+              <Link
+                className={!isLastPage ? styles.next : styles.disable_pagination}
+                to={nextPagePath}
+              >
+                Older Posts
+              </Link>
+            </div>
           </div>
         </div>
       </div>
