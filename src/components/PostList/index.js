@@ -4,7 +4,7 @@ import styles from './postlist.module.css';
 import Img from 'gatsby-image';
 
 const PostList = ({ post, excerpt }) => {
-  let featuredImg = post.featuredImage.childImageSharp.fluid;
+  let featuredImg = post.featuredImage.childImageSharp.fixed;
 
   return (
     <Link className={styles.link} to={`${post.path}`}>

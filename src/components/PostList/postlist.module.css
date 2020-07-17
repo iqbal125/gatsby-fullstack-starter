@@ -1,14 +1,18 @@
-.link {
-  text-decoration: none;
-}
-
 @media only screen and (min-width: 900px) {
   .post_layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 30% 70%;
     overflow: hidden;
-    border: lightgrey 0.5px solid;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    width: 80%;
+  }
+
+  .post_layout:hover {
+    box-shadow: 1px 4px 8px 1px rgba(128, 118, 118, 0.2);
+  }
+
+  .feature_image {
+    padding: 1em;
   }
 }
 
@@ -23,10 +27,8 @@
   }
 }
 
-.post_layout:hover {
-  border: lightgrey 0.5px solid;
-  margin-bottom: 1em;
-  background-color: aliceblue;
+.link {
+  text-decoration: none;
 }
 
 .post_text_container {

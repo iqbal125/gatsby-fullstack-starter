@@ -11,7 +11,7 @@ const BlogTemplate = ({ data }) => {
   const { siteUrl } = siteMetadata;
   const { frontmatter, html, excerpt, id } = data.markdownRemark;
   const { title, date, author, tags, path, heading } = frontmatter;
-  const image = frontmatter.featuredImage.childImageSharp.fluid;
+  const image = frontmatter.featuredImage.childImageSharp.fixed;
   console.log(frontmatter);
 
   const seoData = {
@@ -71,8 +71,8 @@ export const pageQuery = graphql`
         heading
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 125, height: 125) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
