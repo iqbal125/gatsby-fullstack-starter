@@ -1,4 +1,4 @@
-# gatsby_startup_starter_v2
+# Gatsby SAAS Starter V2
 
 
 Gatsby Starter for a SAAS App.   
