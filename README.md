@@ -53,7 +53,7 @@ A lot of Gatsby starters seem to ignore the "A" in JAMstack. This Gatsby Starter
 
 
 ### Illustrations:  
-https://undraw.co/illustrations
+https://undraw.co/illustrations \
 https://www.manypixels.co/
 
 
