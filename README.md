@@ -7,15 +7,7 @@ Gatsby Starter for a SAAS App.
 A lot of Gatsby starters seem to ignore the "A" in JAMstack. This Gatsby Starter comes with its own companion Node server. Complete with authenticaction and a CRUD api to a Postgres Database.  
 
 
-
-
-
-Illustrations:  
-UnDraw  
-similar undraw site  
-
-
-Features:  
+## Features:  
 Full CRUD api requests to companion server  
 JWT Auth support through companion server  
 Fully Responsive  
@@ -34,7 +26,7 @@ Blog Pagination
 SideBar Profile Menu  
 
 
-Authentication Related Features:   
+## Authentication Related Features:   
 Email Authentication through Firebase  
 Google, Facebook and Github Authentication through Firebase  
 JWT Decode and Local Storage through Context  
@@ -46,12 +38,17 @@ Silent Authentication through JWT Local Storage
 Auth Protected Client Only Routes  
 
 
-Minor Features:  
+## Minor Features:  
 Loading Spinner Animation  
 enviroment Variables Support  
 Intersection Observer based Animations  
 Profile Cards with Text Truncation  
 Services Cards and Icons  
+
+
+### Illustrations:  
+https://undraw.co/illustrations
+https://www.manypixels.co/
 
 
 
