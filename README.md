@@ -6,7 +6,7 @@ Gatsby Starter for a SAAS App.
 
 A lot of Gatsby starters seem to ignore the "A" in JAMstack. This Gatsby Starter comes with its own companion Node server. Complete with authenticaction and a CRUD api to a Postgres Database.  
 
-
+<br/><br/><br/><br/>
 
 
 ## Features:  
@@ -28,7 +28,7 @@ Blog Pagination
 SideBar Profile Menu  
 
 
-
+<br/><br/>
 
 ## Authentication Related Features:   
 Email Authentication through Firebase  
@@ -43,14 +43,14 @@ Auth Protected Client Only Routes
 
 
 
-
+<br/><br/>
 ## Minor Features:  
 Loading Spinner Animation  
 enviroment Variables Support  
 Intersection Observer based Animations  
 Profile Cards with Text Truncation  
 Services Cards and Icons  
-
+<br/><br/>
 
 
 
