@@ -43,7 +43,7 @@ A lot of Gatsby starters seem to ignore the "A" in JAMstack. This Gatsby Starter
 
 
 ## Minor Features:  
--Loading Spinner Animation  
+-Loading Spinner Animation on Submit Actions 
 -enviroment Variables Support  
 -Intersection Observer based Animations  
 -Profile Cards with Text Truncation  
