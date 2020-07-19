@@ -27,9 +27,9 @@ const Profile = () => {
     }
   };
 
-  //useEffect(() => {
-  //  fetchTodos();
-  //}, [user]);
+  useEffect(() => {
+    fetchTodos();
+  }, []);
 
   const postTodo = async event => {
     event.preventDefault();
