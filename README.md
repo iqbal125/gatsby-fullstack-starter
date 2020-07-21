@@ -60,7 +60,9 @@ https://www.manypixels.co/
 
 
 
-
+### Required
+This Project requires the use of Aligola, Firebase and Disques. You will need to API keys from each provider. 
+They are all free and only take minutes to setup.
 
 
 
