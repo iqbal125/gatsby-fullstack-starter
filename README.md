@@ -65,5 +65,12 @@ This Project requires the use of Aligola, Firebase and Disques. You will need AP
 They are all free and only take minutes to setup.
 
 
+<br/><br/>
+### Deployment
+The easiest way to host this app is with Netlify. Simply link your own repo of this project, then setup the enviroment variables. 
+
+Also be sure to Authorize your public endpoint on firebase auth under sign-in methods. 
+
+
 
 
