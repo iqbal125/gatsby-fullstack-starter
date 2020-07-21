@@ -1,4 +1,4 @@
-# Gatsby Full Stack Starter V2
+# Gatsby Full Stack Starter
 
 
 Gatsby Starter for a FullStack App.   
