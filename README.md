@@ -1,7 +1,7 @@
-# Gatsby SAAS Starter V2
+# Gatsby Full Stack Starter V2
 
 
-Gatsby Starter for a SAAS App.   
+Gatsby Starter for a FullStack App.   
 
 
 A lot of Gatsby starters seem to ignore the "A" in JAMstack. This Gatsby Starter comes with its own companion Node server. Complete with authenticaction and a CRUD api to a Postgres Database.  
