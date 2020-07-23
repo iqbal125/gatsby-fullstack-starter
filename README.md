@@ -1,10 +1,12 @@
-# Gatsby SAAS Starter V2
+# Gatsby Full Stack Starter
 
 
-Gatsby Starter for a SAAS App.   
+Gatsby Starter for a FullStack App.   
 
 
 A lot of Gatsby starters seem to ignore the "A" in JAMstack. This Gatsby Starter comes with its own companion Node server. Complete with authenticaction and a CRUD api to a Postgres Database.  
+
+https://github.com/iqbal125/node-postgres-auth-api-server  
 
 <br/><br/><br/>
 
@@ -43,7 +45,7 @@ A lot of Gatsby starters seem to ignore the "A" in JAMstack. This Gatsby Starter
 
 
 ## Minor Features:  
--Loading Spinner Animation  
+-Loading Spinner Animation on Submit Actions 
 -enviroment Variables Support  
 -Intersection Observer based Animations  
 -Profile Cards with Text Truncation  
@@ -57,8 +59,17 @@ https://undraw.co/illustrations \
 https://www.manypixels.co/
 
 
+<br/><br/>
+### Required
+This Project requires the use of Aligola, Firebase and Disques. You will need API keys from each provider. 
+They are all free and only take minutes to setup.
 
 
+<br/><br/>
+### Deployment
+The easiest way to host this app is with Netlify. Simply link your own repo of this project, then setup the enviroment variables. 
+
+Also be sure to Authorize your public endpoint on firebase auth under sign-in methods. 
 
 
 
