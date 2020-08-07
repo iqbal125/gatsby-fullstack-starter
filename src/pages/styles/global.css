@@ -4,6 +4,12 @@ html {
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+  --primary-color: blue;
+  --secondary-color: white;
+}
+
 *,
 *:before,
 *:after {
@@ -11,13 +17,16 @@ html {
 }
 
 body {
+  font-size: 1.6rem;
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
-  font-weight: 100;
 }
 
-:root {
-  --primary-color: blue;
-  --secondary-color: white;
-}
+/* 
+Screen Sizes
+Mobile: 400 px;
+Tablet/Mobile Landscape: 700 px
+Laptop/Tablet Landscape: 1000 px;
+Desktop: 1000+ px; 
+ */

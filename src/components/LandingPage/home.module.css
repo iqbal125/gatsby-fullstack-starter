@@ -1,20 +1,206 @@
-/* Desktop Styles */
-@media only screen and (min-width: 900px) {
+/* Mobile styles */
+@media only screen and (max-width: 400px) {
   .main {
     display: flex;
     flex-direction: column;
   }
 
+  .value_prop {
+    padding-top: 0.5rem;
+    margin: 2rem;
+    font-size: 2.5rem;
+  }
+
   .landing_hero {
     display: flex;
-    padding-top: 3em;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
+    align-items: center;
     height: 20%;
     background-position: center; /* Center the image */
     background-size: 100%;
     background-color: lightcyan;
   }
+
+  .hero_illustration {
+    width: 50%;
+    height: 50%;
+    padding-right: 1rem;
+    margin-right: 1.5rem;
+    animation: fadeInRight 1.5s;
+  }
+
+  .feature1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  .feature2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin: 2rem;
+  }
+  .feature1_text {
+    padding-top: 2rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature2_text {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Landing Page Pics and Animations*/
+
+  .feature1_img {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    width: 25em;
+    height: 25em;
+    animation: fadeInRight 1s;
+  }
+
+  .feature2_img_mobile {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    width: 25em;
+    height: 25em;
+    animation: fadeInRight 1s;
+  }
+
+  .feature1_img_none {
+    opacity: 0;
+  }
+
+  .feature2_img_mobile_none {
+    opacity: 0;
+  }
+
+  /* Desktop Only */
+  .feature2_img {
+    display: none;
+  }
+
+  .feature2_img_none {
+    display: none;
+  }
+
+  /* Landing Img End */
+
+  .pic_section {
+    display: none;
+  }
+}
+
+/*Tablet styles */
+@media only screen and (min-width: 400px) and (max-width: 699px) {
+  /* Hero Section  */
+  .landing_hero {
+    display: grid;
+    grid-template-columns: minmax(25%, auto) minmax(65%, auto);
+    grid-template-rows: auto;
+    padding-top: 2rem;
+    background-color: yellow;
+  }
+
+  .landing_hero > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_illustration {
+    padding: 1rem;
+    margin: 1rem;
+    animation: fadeInRight 1.5s;
+    width: 100%;
+    height: 100%;
+  }
+
+  .value_prop {
+    padding-top: 1rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+/*Laptop Styles */
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+  /* Hero Section  */
+  .landing_hero {
+    display: grid;
+    grid-template-columns: minmax(25%, auto) minmax(65%, auto);
+    grid-template-rows: auto;
+    padding-top: 2rem;
+    background-color: yellow;
+  }
+
+  .landing_hero > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_illustration {
+    padding: 1rem;
+    margin: 1rem;
+    animation: fadeInRight 1.5s;
+    width: 100%;
+    height: 100%;
+  }
+
+  .value_prop {
+    padding-top: 1rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1000px) {
+  /* Hero Section  */
+  .landing_hero {
+    display: grid;
+    grid-template-columns: minmax(25%, auto) minmax(65%, auto);
+    grid-template-rows: auto;
+    padding-top: 2rem;
+    background-color: var(--primary-color);
+  }
+
+  .landing_hero > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_illustration {
+    padding: 1rem;
+    margin: 1rem;
+    animation: fadeInRight 1.5s;
+    width: 100%;
+    height: 100%;
+  }
+
+  .value_prop {
+    padding-top: 1rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+    justify-self: end;
+    align-self: center;
+  }
+
+  /* Feature Section */
 
   .feature1 {
     display: flex;
@@ -24,20 +210,21 @@
   .feature2 {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 8rem;
   }
+
   .feature1_text {
-    margin-right: 2em;
-    padding-top: 2em;
-    padding-right: 1em;
+    margin-right: 2rem;
+    padding-top: 2rem;
+    padding-right: 1rem;
     flex-basis: 30%;
     display: flex;
     flex-direction: column;
   }
 
   .feature2_text {
-    padding-top: 1em;
-    padding-left: 3em;
+    padding-top: 1rem;
+    padding-left: 3rem;
     flex-basis: 30%;
     display: flex;
     flex-direction: column;
@@ -46,19 +233,19 @@
   /* Landing Page IMGs and Animations*/
 
   .feature1_img {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    width: 25em;
-    height: 25em;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    height: 100%;
     animation: fadeInRight 1.5s;
   }
 
   .feature2_img {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin-right: 3em;
-    width: 22em;
-    height: 22em;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-right: 3rem;
+    width: 100%;
+    height: 100%;
     animation: fadeInLeft 1.5s;
   }
 
@@ -89,121 +276,26 @@
   .pic_section {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 6em;
-    padding-bottom: 3em;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
   }
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 900px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .landing_hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 20%;
-    background-position: center; /* Center the image */
-    background-size: 100%;
-    background-color: lightcyan;
-  }
-
-  .feature1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2em;
-  }
-
-  .feature2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3em;
-    margin: 2em;
-  }
-  .feature1_text {
-    padding-top: 2em;
-    padding-right: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature2_text {
-    padding-top: 1em;
-    padding-left: 3em;
-    flex-basis: 30%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Landing Page Pics and Animations*/
-
-  .feature1_img {
-    padding-top: 5em;
-    padding-bottom: 2em;
-    width: 25em;
-    height: 25em;
-    animation: fadeInRight 1s;
-  }
-
-  .feature2_img_mobile {
-    padding-top: 5em;
-    padding-bottom: 2em;
-    width: 25em;
-    height: 25em;
-    animation: fadeInRight 1s;
-  }
-
-  .feature1_img_none {
-    opacity: 0;
-  }
-
-  .feature2_img_mobile_none {
-    opacity: 0;
-  }
-
-  /* Desktop Only */
-  .feature2_img {
-    display: none;
-  }
-
-  .feature2_img_none {
-    display: none;
-  }
-
-  /* Landing Img End */
-
-  .pic_section {
-    display: none;
-  }
-}
-
+/* General Styles */
 .site_title {
   text-align: center;
 }
 
-.value_prop {
-  padding-top: 0.5em;
-  margin: 2em;
-  font-size: 2.5em;
-}
-
 .top_line {
   width: 80%;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .hero_illustration {
   width: 50%;
   height: 50%;
-  padding-right: 1em;
-  margin-right: 1.5em;
+  padding-right: 1rem;
+  margin-right: 1.5rem;
   animation: fadeInRight 1.5s;
 }
 
@@ -211,27 +303,21 @@
   width: 100%;
 }
 
-.pic {
-  width: 25%;
-  height: 9em;
-  margin-bottom: 1em;
-}
-
 .bottom_cta_text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .get_started_button {
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   align-self: center;
-  width: 14em;
-  padding: 1em 1em 1em 1em;
+  width: 14rem;
+  padding: 1rem 1rem 1rem 1rem;
   background-color: white;
   border: 1px solid blue;
   color: blue;
@@ -244,12 +330,12 @@
 }
 
 .find_out_more_button {
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   align-self: center;
   border-radius: 5px;
-  width: 8em;
-  padding: 0.5em 1em 0.5em 1em;
+  width: 8rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: blue;
   color: white;
   border: none;
@@ -258,19 +344,19 @@
 }
 
 .bottom_cta_section {
-  margin-top: 7em;
+  margin-top: 7rem;
   margin: 2em;
 }
 
 .social_title {
   text-align: center;
-  margin: 1em;
-  padding-bottom: 2em;
+  margin: 1rem;
+  padding-bottom: 2rem;
 }
 
 .social_bar {
-  padding-top: 7em;
-  margin: 1em;
+  padding-top: 7rem;
+  margin: 1rem;
 }
 
 @keyframes fadeInRight {
