@@ -55,16 +55,14 @@ const Home = () => {
   return (
     <div>
       <div className={styles.landing_hero}>
-        <h1 className={styles.value_prop}>Main Value Prop</h1>
+        <h1 className={styles.value_prop}>
+          Main Value Prop Main Value Prop Main Value Prop Main Value Prop{' '}
+        </h1>
         <div>
           <img className={styles.hero_illustration} src={image3} alt="" />
         </div>
       </div>
-      <div className={styles.wave_bottom_hero}>
-        <img src={image2} alt="" />
-      </div>
-      <h1 className={styles.site_title}> Name of Business</h1>
-      <hr className={styles.top_line} />
+      <div className={styles.wave_bottom_hero}>{/*<img src={image2} alt="" />*/}</div>
 
       <div className={styles.feature1}>
         <div className={styles.feature1_text}>
@@ -84,6 +82,13 @@ const Home = () => {
         </div>
       </div>
       <div ref={intersectTargetFeat2} className={styles.feature2}>
+        <div className={styles.feature2_text}>
+          <h2>Feature #2</h2>
+          <p>Explanation of Feature</p>
+          <button className={styles.find_out_more_button} onClick={toAboutPage}>
+            Get More Info
+          </button>
+        </div>
         <div className={styles.img_container}>
           <img
             className={feat2Intersect ? styles.feature2_img : styles.feature2_img_none}
@@ -91,16 +96,6 @@ const Home = () => {
             alt=""
           />
         </div>
-        <div className={styles.feature2_text}>
-          <h2>Feature #2</h2>
-          <p>Explanation of Feature</p>
-        </div>
-        <img
-          ref={intersectTargetFeat2}
-          className={feat2Intersect ? styles.feature2_img_mobile : styles.feature2_img_mobile_none}
-          src={image5}
-          alt=""
-        />
       </div>
       <div className={styles.bottom_cta_section}>
         <div className={styles.bottom_cta_text}>
@@ -111,7 +106,7 @@ const Home = () => {
         </div>
         <div className={styles.social_bar}>
           <h3 className={styles.social_title}> Or Connect With Us on Social Just to Chat</h3>
-          <SocialBar />
+          {/*<SocialBar />*/}
         </div>
       </div>
     </div>

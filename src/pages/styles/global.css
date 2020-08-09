@@ -4,21 +4,16 @@ html {
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 :root {
   font-size: 62.5%;
-  --primary-color: blue;
+  --primary-color: lightblue;
   --secondary-color: white;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-=======
-*, *:before, *:after {
   box-sizing: border-box;
->>>>>>> 1bf8e9f6505181f6e74189097c764e6354dec117
 }
 
 body {
