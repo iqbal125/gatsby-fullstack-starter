@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
-  height: 24em;
+  height: 32rem;
   width: 100%;
   border-bottom: 2em solid blue;
 }
@@ -19,35 +19,34 @@
   display: flex;
 }
 
-/* fix card image for larger screens, add font weights to card text */
-
 .card_image {
-  width: 10em;
-  height: 13em;
+  width: 10rem;
+  height: 13rem;
 }
 
 .card_title {
-  padding-left: 1em;
-  padding-right: 0.2em;
+  padding-left: 1rem;
+  padding-right: 0.2rem;
 }
 
 .card_desc {
-  padding: 1em;
-  margin-top: 1em;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
+/* Truncation Action Buttons */
 .collapse {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
-  padding-left: 1em;
-  padding-bottom: 0.2em;
-  margin-top: -0.5em;
+  padding-left: 1rem;
+  padding-bottom: 0.2rem;
+  margin-top: -0.5rem;
 }
 
 .read_more {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
-  padding-top: 0.2em;
+  padding-top: 0.2rem;
 }

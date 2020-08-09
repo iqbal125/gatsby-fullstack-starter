@@ -6,7 +6,7 @@ export const profiles = [
     image: image1,
     name: 'John Smith',
     title: 'Founder and CEO',
-    description: ``
+    description: `untruncated description`
   },
   {
     id: 2,
