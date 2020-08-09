@@ -36,12 +36,9 @@ const Home = () => {
         let isFeat2 = entry.target.className.includes('feature2');
 
         if (entry.isIntersecting && isFeat1) {
-          console.log('feat1');
           setFeat1(true);
         }
         if (entry.isIntersecting && isFeat2) {
-          console.log(entry);
-          console.log('feat2');
           setFeat2(true);
         }
       });
@@ -62,9 +59,18 @@ const Home = () => {
           <img className={styles.hero_illustration} src={image3} alt="" />
         </div>
       </div>
-      <div className={styles.wave_bottom_hero}>{/*<img src={image2} alt="" />*/}</div>
+      <div className={styles.wave_bottom_hero}>
+        <img src={image2} alt="" />
+      </div>
 
       <div className={styles.feature1}>
+        <img
+          ref={intersectTargetFeat1}
+          className={feat1Intersect ? styles.feature1_img : styles.feature1_img_none}
+          src={image1}
+          alt=""
+        />
+
         <div className={styles.feature1_text}>
           <h2>Feature #1</h2>
           <p>Explanation of Feature</p>
@@ -72,29 +78,17 @@ const Home = () => {
             Find Out More
           </button>
         </div>
-        <div className={styles.img_container}>
-          <img
-            ref={intersectTargetFeat1}
-            className={feat1Intersect ? styles.feature1_img : styles.feature1_img_none}
-            src={image1}
-            alt=""
-          />
-        </div>
       </div>
       <div ref={intersectTargetFeat2} className={styles.feature2}>
+        <img
+          className={feat2Intersect ? styles.feature2_img : styles.feature2_img_none}
+          src={image5}
+          alt=""
+        />
+
         <div className={styles.feature2_text}>
           <h2>Feature #2</h2>
           <p>Explanation of Feature</p>
-          <button className={styles.find_out_more_button} onClick={toAboutPage}>
-            Get More Info
-          </button>
-        </div>
-        <div className={styles.img_container}>
-          <img
-            className={feat2Intersect ? styles.feature2_img : styles.feature2_img_none}
-            src={image5}
-            alt=""
-          />
         </div>
       </div>
       <div className={styles.bottom_cta_section}>
@@ -106,7 +100,7 @@ const Home = () => {
         </div>
         <div className={styles.social_bar}>
           <h3 className={styles.social_title}> Or Connect With Us on Social Just to Chat</h3>
-          {/*<SocialBar />*/}
+          <SocialBar />
         </div>
       </div>
     </div>
