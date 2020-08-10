@@ -230,6 +230,7 @@
     align-items: center;
     background-color: white;
     border: 2px solid black;
+    z-index: 1;
   }
 
   .dropdown_not_home {
@@ -242,6 +243,7 @@
     align-items: center;
     background-color: white;
     border: 2px solid black;
+    z-index: 1;
   }
 
   .header_link_active {
