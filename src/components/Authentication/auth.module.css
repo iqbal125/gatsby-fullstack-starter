@@ -4,7 +4,8 @@
 }
 
 .form_container {
-  width: 60vh;
+  display: flex;
+  justify-content: center;
 }
 
 .loader {
