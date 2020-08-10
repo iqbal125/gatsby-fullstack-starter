@@ -125,22 +125,24 @@
 /* Mobile Header */
 
 @media only screen and (max-width: 769px) {
-  header {
+  .top_header_not_home {
+    border-bottom: lightgrey 0.5px dotted;
+    margin-bottom: 3rem;
   }
 
   .header_home {
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
     padding: 0.5em;
     background-color: var(--primary-color);
   }
 
   .header_not_home {
-    border-bottom: lightgrey 0.5px dotted;
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
     padding: 0.5em;
-    margin-bottom: 2em;
   }
 
   .right_header {

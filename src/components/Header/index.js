@@ -31,7 +31,7 @@ const Header = ({ props }) => {
 
   return (
     <>
-      <header>
+      <header className={isHome ? '' : styles.top_header_not_home}>
         <div className={isHome ? styles.header_home : styles.header_not_home}>
           <div className={styles.left_header}>
             {/* Desktop */}
