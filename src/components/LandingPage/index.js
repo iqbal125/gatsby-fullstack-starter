@@ -64,13 +64,6 @@ const Home = () => {
       </div>
 
       <div className={styles.feature1}>
-        <img
-          ref={intersectTargetFeat1}
-          className={feat1Intersect ? styles.feature1_img : styles.feature1_img_none}
-          src={image1}
-          alt=""
-        />
-
         <div className={styles.feature1_text}>
           <h2>Feature #1</h2>
           <p>Explanation of Feature</p>
@@ -78,6 +71,12 @@ const Home = () => {
             Find Out More
           </button>
         </div>
+        <img
+          ref={intersectTargetFeat1}
+          className={feat1Intersect ? styles.feature1_img : styles.feature1_img_none}
+          src={image1}
+          alt=""
+        />
       </div>
       <div ref={intersectTargetFeat2} className={styles.feature2}>
         <img
