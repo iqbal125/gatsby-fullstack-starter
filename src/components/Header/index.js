@@ -31,97 +31,160 @@ const Header = ({ props }) => {
 
   return (
     <>
-      <header className={isHome ? styles.header_home : styles.header_not_home}>
-        <div className={styles.left_header}>
-          {/* Desktop */}
-          <div className={styles.desktop_logo}>
-            <Link to="/">
-              <img src={logo} alt="" />
-            </Link>
-          </div>
-          {/* Mobile */}
-          <div className={styles.menu_icon}>
-            {!navLinks ? (
-              <div onClick={navLinksHandler} className={styles.hamburger}>
-                <GiHamburgerMenu />
-              </div>
-            ) : (
-              <div onClick={navLinksHandler} className={styles.close_button}>
-                <AiOutlineClose />
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div className={styles.mid_header}>
-          {/* Desktop */}
-          <div className={styles.desktop_links}>
-            <Link
-              to="/about"
-              className={styles.header_link}
-              activeClassName={styles.header_link_active}
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className={styles.header_link}
-              activeClassName={styles.header_link_active}
-            >
-              Contact
-            </Link>
-            <Link
-              to="/services"
-              className={styles.header_link}
-              activeClassName={styles.header_link_active}
-            >
-              Services
-            </Link>
-            <Link
-              to="/blog"
-              className={styles.header_link}
-              activeClassName={styles.header_link_active}
-            >
-              Blog
-            </Link>
-          </div>
-          {/* Mobile */}
-          <div className={styles.mobile_logo}>
-            <Link to="/">
-              <img src={logo} alt="" />
-            </Link>
-          </div>
-        </div>
-
-        <div className={styles.right_header}>
-          {/* Desktop */}
-          <div className={styles.searchbox}>
-            <div className={styles.search}>
-              <Search />
+      <header>
+        <div className={isHome ? styles.header_home : styles.header_not_home}>
+          <div className={styles.left_header}>
+            {/* Desktop */}
+            <div className={styles.desktop_logo}>
+              <Link to="/">
+                <img src={logo} alt="" />
+              </Link>
             </div>
-          </div>
-          {!context.authState.isAuthenticated && (
-            <Link to="/app/login" className={styles.login_button_desktop}>
-              Login
-            </Link>
-          )}
-          {context.authState.isAuthenticated && (
-            <div className={styles.header_photo_wrap_desk}>
-              {context.authState.user.photo ? (
-                <img
-                  src={context.authState.user.photo}
-                  onClick={menuHandler}
-                  className={styles.header_photo}
-                  alt="Not Found"
-                />
+            {/* Mobile */}
+            <div className={styles.menu_icon}>
+              {!navLinks ? (
+                <div onClick={navLinksHandler} className={styles.hamburger}>
+                  <GiHamburgerMenu />
+                </div>
               ) : (
-                <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
+                <div onClick={navLinksHandler} className={styles.close_button}>
+                  <AiOutlineClose />
+                </div>
+              )}
+              {/* Mobile Hamburger Links*/}
+              {navLinks && (
+                <>
+                  <div className={isHome ? styles.dropdown_home : styles.dropdown_not_home}>
+                    <Link
+                      to="/about"
+                      className={styles.header_links_mobile}
+                      activeClassName={styles.header_link_active}
+                    >
+                      About
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className={styles.header_links_mobile}
+                      activeClassName={styles.header_link_active}
+                    >
+                      Contact
+                    </Link>
+                    <Link
+                      to="/services"
+                      className={styles.header_links_mobile}
+                      activeClassName={styles.header_link_active}
+                    >
+                      Services
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className={styles.header_links_mobile}
+                      activeClassName={styles.header_link_active}
+                    >
+                      Blog
+                    </Link>
+                  </div>
+                </>
               )}
             </div>
-          )}
+          </div>
+
+          <div className={styles.mid_header}>
+            {/* Desktop */}
+            <div className={styles.desktop_links}>
+              <Link
+                to="/about"
+                className={styles.header_link}
+                activeClassName={styles.header_link_active}
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className={styles.header_link}
+                activeClassName={styles.header_link_active}
+              >
+                Contact
+              </Link>
+              <Link
+                to="/services"
+                className={styles.header_link}
+                activeClassName={styles.header_link_active}
+              >
+                Services
+              </Link>
+              <Link
+                to="/blog"
+                className={styles.header_link}
+                activeClassName={styles.header_link_active}
+              >
+                Blog
+              </Link>
+            </div>
+            {/* Mobile */}
+            <div className={styles.mobile_logo}>
+              <Link to="/">
+                <img src={logo} alt="" />
+              </Link>
+            </div>
+          </div>
+
+          <div className={styles.right_header}>
+            {/* Desktop */}
+            <div className={styles.searchbox}>
+              <div className={styles.search}>
+                <Search />
+              </div>
+            </div>
+            {!context.authState.isAuthenticated && (
+              <Link to="/app/login" className={styles.login_button_desktop}>
+                Login
+              </Link>
+            )}
+            {context.authState.isAuthenticated && (
+              <div className={styles.header_photo_wrap_desk}>
+                {context.authState.user.photo ? (
+                  <img
+                    src={context.authState.user.photo}
+                    onClick={menuHandler}
+                    className={styles.header_photo}
+                    alt="Not Found"
+                  />
+                ) : (
+                  <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
+                )}
+              </div>
+            )}
+            {/* Mobile */}
+            <div className={styles.profile_section}>
+              {!context.authState.isAuthenticated && (
+                <Link
+                  to="/app/login"
+                  className={styles.login_button_mobile}
+                  activeClassName={styles.login_button_active}
+                >
+                  Login
+                </Link>
+              )}
+
+              {context.authState.isAuthenticated && (
+                <div className={styles.header_photo_wrap_mobile}>
+                  {context.authState.user.photo ? (
+                    <img
+                      src={context.authState.user.photo}
+                      onClick={menuHandler}
+                      className={styles.header_photo}
+                      alt="Not Found"
+                    />
+                  ) : (
+                    <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-        {/* Mobile */}
-        <div className={styles.mobile_search}>
+        <div className={isHome ? styles.mobile_search : styles.mobile_search_not_home}>
           {search && (
             <div className={isHome ? styles.search_home : styles.search_not_home}>
               <Search />
@@ -130,67 +193,8 @@ const Header = ({ props }) => {
           <div onClick={searchHandler} className={styles.search_icon}>
             <FcSearch />
           </div>
-          {!context.authState.isAuthenticated && (
-            <Link
-              to="/app/login"
-              className={styles.login_button_mobile}
-              activeClassName={styles.login_button_active}
-            >
-              Login
-            </Link>
-          )}
-
-          {context.authState.isAuthenticated && (
-            <div className={styles.header_photo_wrap_mobile}>
-              {context.authState.user.photo ? (
-                <img
-                  src={context.authState.user.photo}
-                  onClick={menuHandler}
-                  className={styles.header_photo}
-                  alt="Not Found"
-                />
-              ) : (
-                <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
-              )}
-            </div>
-          )}
         </div>
       </header>
-      {/* Mobile Hamburger Links*/}
-      {navLinks && (
-        <>
-          <div className={isHome ? styles.dropdown_home : styles.dropdown_not_home}>
-            <Link
-              to="/about"
-              className={styles.header_links_mobile}
-              activeClassName={styles.header_link_active}
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className={styles.header_links_mobile}
-              activeClassName={styles.header_link_active}
-            >
-              Contact
-            </Link>
-            <Link
-              to="/services"
-              className={styles.header_links_mobile}
-              activeClassName={styles.header_link_active}
-            >
-              Services
-            </Link>
-            <Link
-              to="/blog"
-              className={styles.header_links_mobile}
-              activeClassName={styles.header_link_active}
-            >
-              Blog
-            </Link>
-          </div>
-        </>
-      )}
     </>
   );
 };
