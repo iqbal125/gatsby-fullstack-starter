@@ -17,7 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "algoliasearch": "^3.35.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "firebase": "^7.3.0",
     "formik": "^2.0.3",
